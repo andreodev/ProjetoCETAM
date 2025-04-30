@@ -49,5 +49,7 @@
 .card :hover {
     animation: backwards;
 }
-
+body{
+    background-color: #FFFF00;
+}
 

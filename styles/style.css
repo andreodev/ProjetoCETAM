@@ -5,20 +5,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  
-  
+  background-color: 		#ffa940;
 }
-
 .title {
   text-align: center;
   font-size: 7rem;
   font-weight: 800;
-  color: #8aff9a;
+  color: #363636;
   font-family: 'Comic Neue', cursive;
   margin-top: 2rem;
   animation: fadeInUp 1s ease-out ;
   letter-spacing: 1px;
 }
+
 
 /* Animação de entrada suave */
 @keyframes fadeInUp {
@@ -71,3 +70,4 @@
 .site-footer a[href*="instagram"] {
   color: #e1306c;
 }
+

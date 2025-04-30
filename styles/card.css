@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 .containerCard {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
@@ -11,6 +10,7 @@
 	padding: 40px 20px;
 	
 }
+
 
 @media (min-width: 1200px) {
 	.containerCard {
