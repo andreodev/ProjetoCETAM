@@ -4,15 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  background-color: 		#ffa940;
+  font-family: 'comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #fceabb, #00ff95);
 }
 .title {
   text-align: center;
   font-size: 7rem;
   font-weight: 800;
-  color: #363636;
-  font-family: 'Comic Neue', cursive;
+  color: #1500ff;
+  font-family: 'comic Sans MS', cursive, sans-serif;
   margin-top: 2rem;
   animation: fadeInUp 1s ease-out ;
   letter-spacing: 1px;
@@ -69,5 +69,10 @@
 
 .site-footer a[href*="instagram"] {
   color: #e1306c;
+}
+button:hover, .card:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
 }
 
