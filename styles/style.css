@@ -5,13 +5,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(to bottom, #fceabb, #00ff95);
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
 }
 .title {
   text-align: center;
   font-size: 7rem;
   font-weight: 800;
-  color: #1500ff;
+  color: #4a90e2;
   font-family: 'comic Sans MS', cursive, sans-serif;
   margin-top: 2rem;
   animation: fadeInUp 1s ease-out ;
