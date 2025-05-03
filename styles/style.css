@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 *{
+  font-family: "Fredoka", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  background: linear-gradient(to bottom, #ffe3bb, #fcb69f);
 }
 .title {
   font-family: "Fredoka", sans-serif;
   text-align: center;
   font-size: 7rem;
   font-weight: 800;
-  color: #FF8A65;
+  color: #ff6536;
 
   margin-top: 2rem;
   animation: fadeInUp 1s ease-out ;
@@ -35,7 +36,6 @@
 /*FOOTER*/
 
 .site-footer {
-  background-color: #ffeb3b;
   padding: 20px;
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
