@@ -6,14 +6,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(to bottom, #ffe3bb, #fcb69f);
+  
+}
+
+body {
+  background-color: #3F7D58;
 }
 .title {
   font-family: "Fredoka", sans-serif;
   text-align: center;
   font-size: 7rem;
   font-weight: 800;
-  color: #ff6536;
+  color: #EFEFEF;
 
   margin-top: 2rem;
   animation: fadeInUp 1s ease-out ;
@@ -39,7 +43,9 @@
   padding: 20px;
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #333;
+  color: white;
+  background-color: #EF9651;
+  font-size: 1.2rem;
 }
 
 .site-footer p {

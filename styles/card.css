@@ -55,16 +55,7 @@
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-texto {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	text-align: center;
-	color: white;
-	font-size: 22px;
-	border-radius: 3%;
-}
+
 
 .row {
 	display: flex;
