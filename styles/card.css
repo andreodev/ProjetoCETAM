@@ -1,74 +1,69 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-.containerCard {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-	gap: 20px; 
-	padding: 40px 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+.containerSons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
 
 @media (min-width: 1200px) {
-	.containerCard {
-			grid-template-columns: repeat(4, 1fr); 
-	}
+    .containerSonos {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 900px) {
-	.containerCard {
-			grid-template-columns: repeat(3, 1fr); 
-	}
+    .containerSonos {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
-	.containerCard {
-			grid-template-columns: repeat(2, 1fr); 
-	}
+    .containerSonos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 400px) {
-	.containerCard {
-			grid-template-columns: 1fr; 
-	}
+    .containerSonos {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cardPrincipal {
-	width: 100%;
-	height: 200px;
-	background-position: center;
-	justify-content: center;
-	background-size: cover;
-	align-items: center;
-	text-align: center;
-	border-radius: 10px;
-	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-	position: relative;
-	cursor: pointer;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardPrincipal:hover {
-	transform: scale(1.05);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.row {
-	display: flex;
-	gap: 20px;
-	justify-content: center;
-	margin-bottom: 20px;
+.cardTexto {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
-.row-top{
-	justify-content: center;
-}
-.row-bottom{
-	justify-content: center;
-}
-
-
-
