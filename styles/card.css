@@ -1,61 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .containerSons {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
-    padding: 40px 20px;
-}
-
-@media (min-width: 1200px) {
-    .containerSonos {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .containerSonos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .containerSonos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 400px) {
-    .containerSonos {
-        grid-template-columns: 1fr;
-    }
-}
-
-.cardPrincipal {
+    padding: 30px 20px;
+  }
+  
+  /* Card principal com estilo mais divertido */
+  .cardPrincipal {
     width: 100%;
     height: 200px;
     background-position: center;
-    justify-content: center;
     background-size: cover;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cardPrincipal:hover {
+    animation: fadeInUp 2s ease forwards;
+    overflow: hidden;
+    border: 3px solid transparent;
+  }
+  
+  .cardPrincipal:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cardTexto {
+  }
+  
+  /* Texto do card, com estilo lúdico */
+  .cardTexto {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -66,4 +38,53 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
-}
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  /* Animação de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .containerSons {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .containerSons {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes brilhoEstrela {
+    0% {
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.8);
+      transform: scale(1.1);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+      transform: scale(1);
+    }
+  }
+  
+  .cardBrilhando {
+    animation: brilhoEstrela 3s ease;
+  }
+  
