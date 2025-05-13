@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
         divCard.style.backgroundImage = `url('assets/imagens/${som.imagem}')`;
 
         // Aplicar delay incremental na animação
-        setTimeout(() => {
-            divCard.classList.add("fade-in-up");
-            divCard.style.animationDelay = `${index * 100}ms`;
+        divCard.style.transitionDelay = `${index * 150}ms`;
+          setTimeout(() => {
+              divCard.classList.add("fade-in-up");
           }, 10);
           
 
