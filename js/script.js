@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
       { nome: "Leão", imagem: "leao.png", arquivo: "leao.mp3" },
       { nome: "Passáro", imagem: "passaro.png", arquivo: "passaro.mp3" },
     ],
+    instrumentos: [
+      { nome: "flauta", imagem: "flauta.png", arquivo: "flauta.mp3" },
+      { nome: "Guitarra", imagem: "guitarra.png", arquivo: "Guitarra.mp3" },
+      { nome: "Violino", imagem: "violino.png", arquivo: "Violino.mp3" },
+      { nome: "piano", imagem: "piano.png", arquivo: "piano.mp3" },
+    ],
+    natureza: [
+      { nome: "cachoeira", imagem: "cachoeira.png", arquivo: "cachoeira.mp3" },
+      { nome: "trovao", imagem: "trovao.png", arquivo: "Trovao.mp3" },
+      { nome: "vento", imagem: "vento.png", arquivo: "vento.mp3" },
+      { nome: "chuva", imagem: "chuva.png", arquivo: "chuva.mp3" },
+    ],
     transportes: [
       { nome: "Carro", imagem: "carro.png", arquivo: "carro.mp3" },
       { nome: "Avião", imagem: "aviao.png", arquivo: "aviao.mp3" },
@@ -17,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
     sons: [
       { nome: "Aplausos", imagem: "aplausos.png", arquivo: "aplausos.mp3" },
-      { nome: "Assobio", imagem: "assobio.png", arquivo: "assobio.mp3" },
+      { nome: "Assobio", imagem: "assobio.png", arquivo: "Assobio.mp3" },
+      { nome: "Risada", imagem: "risos.png", arquivo: "risada.mp3" },
+      { nome: "Torcida", imagem: "tprcida.png", arquivo: "torcida.mp3" },
     ],
   };
 
