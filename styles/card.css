@@ -4,64 +4,71 @@
   justify-content: center;
   gap: 20px;
   padding: 30px 20px;
-  
+  position: relative;
+  overflow: visible; /* Permite que os elementos filhos cresçam além do limite */
 }
 
-
-/* Card principal com estilo mais divertido */
-
+/* Estilo inicial dos cards para animar */
 .cardPrincipal {
-  width: 100%;
-  height: 200px;
+  width: 200px !important; /* Define largura fixa */
+  height: 200px !important; /* Define altura fixa */
   background-position: center;
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   position: relative;
-  cursor: pointer;
-  opacity: 0;
-  /* <-- novo */
-  transform: translateY(30px);
-  /* <-- novo */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  overflow: hidden;
   border: 3px solid transparent;
   background-color: black;
+
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease !important; /* Adiciona transição */
+  cursor: pointer;
+  z-index: 0;
+
+  will-change: transform; /* Otimiza a transição */
+  display: flex; /* Garante que o conteúdo interno seja flexível */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
 }
 
 .cardPrincipal:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-15px) scale(1.1) !important; /* Aumenta o tamanho e sobe mais */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5) !important; /* Sombra mais intensa */
+  z-index: 10;
+  transform: scale(1.2); /* Aumenta o tamanho para teste */
+  background-color: yellow; /* Apenas para verificar o hover */
 }
 
-
 /* Texto do card, com estilo lúdico */
-
 .cardTexto {
   position: absolute;
+  width: 100%;
+  text-align: center;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
+  z-index: 20;
 }
 
-.fade-in-up {
+
+.fade-in-down {
   opacity: 1 !important;
   transform: translateY(0) !important;
+  transition: opacity 1.5s ease, transform 1.5s ease; /* Aumenta a duração para 1.5s */
 }
 
-
-/* Animação de entrada */
-
-@keyframes fadeInUp {
+@keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-190px);
   }
   to {
     opacity: 1;
@@ -71,7 +78,6 @@
 
 
 /* Responsividade */
-
 @media (max-width: 768px) {
   .containerSons {
     grid-template-columns: repeat(2, 1fr);

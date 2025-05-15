@@ -3,37 +3,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const rowBottom = document.getElementById("row-bottom");
 
   const sons = {
-    animais: [
-      { nome: "Sapo", imagem: "sapo.png", arquivo: "sapo.mp3" },
-      { nome: "Gato", imagem: "cat.ico", arquivo: "gato.mp3" },
-      { nome: "Leão", imagem: "leao.png", arquivo: "leao.mp3" },
-      { nome: "Passáro", imagem: "passaro.png", arquivo: "passaro.mp3" },
-    ],
-    instrumentos: [
-      { nome: "flauta", imagem: "flauta.png", arquivo: "flauta.mp3" },
-      { nome: "Guitarra", imagem: "guitarra.png", arquivo: "Guitarra.mp3" },
-      { nome: "Violino", imagem: "violino.png", arquivo: "Violino.mp3" },
-      { nome: "piano", imagem: "piano.png", arquivo: "piano.mp3" },
-    ],
-    natureza: [
-      { nome: "cachoeira", imagem: "cachoeira.png", arquivo: "cachoeira.mp3" },
-      { nome: "trovao", imagem: "trovao.png", arquivo: "Trovao.mp3" },
-      { nome: "vento", imagem: "vento.png", arquivo: "vento.mp3" },
-      { nome: "chuva", imagem: "chuva.png", arquivo: "chuva.mp3" },
-    ],
-    transportes: [
-      { nome: "Carro", imagem: "carro.png", arquivo: "carro.mp3" },
-      { nome: "Avião", imagem: "aviao.png", arquivo: "aviao.mp3" },
-      { nome: "Caminhão", imagem: "caminhao.png", arquivo: "caminhao.mp3" },
-      { nome: "Trem", imagem: "trem.png", arquivo: "Trem.mp3" },
-    ],
-    sons: [
-      { nome: "Aplausos", imagem: "aplausos.png", arquivo: "aplausos.mp3" },
-      { nome: "Assobio", imagem: "assobio.png", arquivo: "Assobio.mp3" },
-      { nome: "Risada", imagem: "risos.png", arquivo: "risada.mp3" },
-      { nome: "Torcida", imagem: "tprcida.png", arquivo: "torcida.mp3" },
-    ],
-  };
+  animais: [
+    { nome: "Sapo", imagem: "sapo.png", arquivo: "sapo.mp3" },
+    { nome: "Gato", imagem: "gato.jpg", arquivo: "gato.mp3" },
+    { nome: "Leão", imagem: "leao.jpg", arquivo: "leao.mp3" },
+    { nome: "Pássaro", imagem: "bird.jpg", arquivo: "passaro.mp3" }, // Corrigido: Passáro → Pássaro
+  ],
+  instrumentos: [
+    { nome: "Flauta", imagem: "flauta.jpg", arquivo: "flauta.mp3" }, // Corrigido: flauta → Flauta
+    { nome: "Guitarra", imagem: "guitarra.png", arquivo: "Guitarra.mp3" },
+    { nome: "Violino", imagem: "violino.png", arquivo: "Violino.mp3" },
+    { nome: "Piano", imagem: "piano.png", arquivo: "piano.mp3" }, // Corrigido: piano → Piano
+  ],
+  natureza: [
+    { nome: "Cachoeira", imagem: "cachoeira.png", arquivo: "cachoeira.mp3" }, // Corrigido: cachoeira → Cachoeira
+    { nome: "Trovão", imagem: "trovao.jpg", arquivo: "Trovao.mp3" }, // Corrigido: trovao → Trovão
+    { nome: "Vento", imagem: "vento.png", arquivo: "vento.mp3" }, // Corrigido: vento → Vento
+    { nome: "Chuva", imagem: "chuva.png", arquivo: "chuva.mp3" }, // Corrigido: chuva → Chuva
+  ],
+  transportes: [
+    { nome: "Carro", imagem: "carro.png", arquivo: "carro.mp3" },
+    { nome: "Avião", imagem: "aviao.png", arquivo: "aviao.mp3" },
+    { nome: "Caminhão", imagem: "caminhao.png", arquivo: "caminhao.mp3" },
+    { nome: "Trem", imagem: "trem.png", arquivo: "Trem.mp3" },
+  ],
+  sons: [
+    { nome: "Aplausos", imagem: "aplausos.png", arquivo: "aplausos.mp3" },
+    { nome: "Assobio", imagem: "assobio.png", arquivo: "Assobio.mp3" },
+    { nome: "Risada", imagem: "risada.jpg", arquivo: "risada.mp3" },
+    { nome: "Torcida", imagem: "tprcida.png", arquivo: "torcida.mp3" }, // Corrigido nome do som (abaixo com observação)
+  ],
+};
 
   let audioAtual = null;
   let timeoutAudio = null;
@@ -51,13 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
         divCard.classList.add("cardPrincipal");
         divCard.style.backgroundImage = `url('assets/imagens/${som.imagem}')`;
 
-        // Aplicar delay incremental na animação
-        divCard.style.transitionDelay = `${index * 150}ms`;
-          setTimeout(() => {
-              divCard.classList.add("fade-in-up");
-          }, 10);
-          
+        // Garantir que os estilos sejam aplicados corretamente aos cards criados dinamicamente
+        divCard.style.width = "200px"; // Define largura fixa
+        divCard.style.height = "200px"; // Define altura fixa
 
+        // Ajustar a duração da transição para torná-la mais lenta
+        divCard.style.transition = "transform 2s ease, box-shadow 2s ease, opacity 1.5s ease"; // Aumenta a duração da transição
+
+        // Ajustar a duração da transição e garantir consistência
+        setTimeout(() => {
+          divCard.classList.add("fade-in-down");
+        }, index * 150); // Ajustar o delay incremental para 150ms por card
 
         const cardTexto = document.createElement("div");
         cardTexto.classList.add("cardTexto");

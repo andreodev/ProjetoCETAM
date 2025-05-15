@@ -1,44 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-*{
-  font-family: "Fredoka", sans-serif;
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'comic Sans MS', cursive, sans-serif;
-  
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
   background-color: #3F7D58;
+  margin: 0;
+  padding: 0;
 }
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   font-family: "Fredoka", sans-serif;
-  text-align: center;
   font-size: 7rem;
   font-weight: 800;
   color: #EFEFEF;
-
-  margin-top: 2rem;
-  animation: fadeInUp 1s ease-out ;
-  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #EFEFEF;
+  width: 0ch;
+  animation: typing 1.2s steps(30, end) forwards, blink 1s step-end infinite;
+  display: inline-block;
 }
 
-
-/* Animação de entrada suave */
-@keyframes fadeInUp {
+@keyframes typing {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    width: 0ch;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    width: 7ch; /* Número de letras */
   }
 }
 
-/*FOOTER*/
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
+/* Hover no título */
+.title:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Rodapé (footer) */
 .site-footer {
   padding: 20px;
   text-align: center;
@@ -46,6 +65,7 @@ body {
   color: white;
   background-color: #EF9651;
   font-size: 1.2rem;
+  margin-top: auto; /* Empurra o footer para o final */
 }
 
 .site-footer p {
@@ -58,28 +78,15 @@ body {
   margin: 0 10px;
 }
 
-.site-footer a[href*="sobre"] {
-  color: #ff5722;
-}
+.site-footer a[href*="sobre"] { color: #ff5722; }
+.site-footer a[href*="contato"] { color: #4caf50; }
+.site-footer a[href*="privacidade"] { color: #2196f3; }
+.site-footer a[href*="facebook"] { color: #3b5998; }
+.site-footer a[href*="instagram"] { color: #e1306c; }
 
-.site-footer a[href*="contato"] {
-  color: #4caf50;
-}
-
-.site-footer a[href*="privacidade"] {
-  color: #2196f3;
-}
-
-.site-footer a[href*="facebook"] {
-  color: #3b5998;
-}
-
-.site-footer a[href*="instagram"] {
-  color: #e1306c;
-}
-button:hover, .card:hover{
+button:hover,
+.card:hover {
   transform: scale(1.05);
   transition: 0.3s ease;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
-
